@@ -1,10 +1,237 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Personal Website</title>
-  </head>
-  <body>
-    <h1>Hello, World!</h1>
-    <p>Welcome to my new website hosted on GitHub Pages.</p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- 1. GLOBAL VARIABLES (The Theme) --- */
+        :root {
+            --bg-color: #fdfbf7;      /* Warm paper white */
+            --sidebar-bg: #f4f1ea;    /* Slightly darker paper for sidebar */
+            --text-main: #2a2a2a;     /* Soft black */
+            --text-muted: #666666;    /* Grey for subtitles */
+            --accent: #d14d28;        /* Burnt orange for links/buttons */
+            --line-color: #e0ded5;    /* Border lines */
+            --font-serif: 'Playfair Display', serif; /* Editorial Headings */
+            --font-sans: 'Inter', sans-serif;        /* App UI text */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            height: 100vh;
+            display: flex;
+            overflow: hidden; /* App-like feel: Body doesn't scroll, content does */
+        }
+
+        /* --- 2. SIDEBAR (The "App" Shell) --- */
+        aside {
+            width: 280px;
+            background-color: var(--sidebar-bg);
+            border-right: 1px solid var(--line-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            font-size: 1.5rem;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .role {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin-top: 3rem;
+        }
+
+        nav li { margin-bottom: 1.2rem; }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: var(--accent); }
+
+        .social-links {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            border-bottom: 1px solid var(--line-color);
+            margin-right: 10px;
+        }
+
+        /* --- 3. MAIN CONTENT (The "Editorial" Scroll) --- */
+        main {
+            flex-grow: 1;
+            overflow-y: auto; /* Only this area scrolls */
+            padding: 4rem 6rem;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            margin-bottom: 8rem; /* Lots of breathing room */
+            max-width: 800px;
+        }
+
+        h1 {
+            font-family: var(--font-serif);
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--line-color);
+            padding-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-text {
+            font-size: 1.4rem;
+            color: var(--text-muted);
+            font-family: var(--font-serif);
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        /* --- 4. PROJECT CARDS --- */
+        .project-card {
+            margin-bottom: 4rem;
+        }
+
+        .project-meta {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .project-title:hover { text-decoration: underline; }
+
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 768px) {
+            body { flex-direction: column; overflow: auto; }
+            aside { width: 100%; height: auto; padding: 1.5rem; border-bottom: 1px solid var(--line-color); }
+            main { padding: 2rem; overflow: visible; }
+            nav ul { display: flex; gap: 20px; margin-top: 1rem; }
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <aside>
+        <div class="header">
+            <div class="logo">Alex Morgan</div>
+            <div class="role">Product Designer</div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Introduction</a></li>
+                <li><a href="#work">Selected Work</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+        </div>
+    </aside>
+
+    <main>
+        
+        <section id="home">
+            <h1>Building digital products with clarity and purpose.</h1>
+            <p class="intro-text">
+                I specialize in simplifying complex data systems into intuitive, human-centric interfaces.
+            </p>
+            <p>
+                Currently based in London, working with FinTech startups to redefine how people interact with money.
+            </p>
+        </section>
+
+        <section id="work">
+            <h2>Selected Work</h2>
+
+            <div class="project-card">
+                <div class="project-meta">Case Study 01 — FinTech App</div>
+                <a href="#" class="project-title">The Future of Mobile Banking</a>
+                <p>
+                    A complete redesign of a legacy banking application, focusing on accessibility and speed. 
+                    Reduced user transaction time by 40%.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-meta">Case Study 02 — Data Visualization</div>
+                <a href="#" class="project-title">Climate Change Dashboard</a>
+                <p>
+                    An interactive React-based dashboard visualizing 50 years of global temperature changes 
+                    using D3.js.
+                </p>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>
+                My background is a blend of Design and Computer Science. I believe the best products exist 
+                at the intersection of beautiful aesthetics and robust engineering.
+            </p>
+            <p>
+                When I'm not coding, I'm usually hiking or experimenting with analog photography.
+            </p>
+        </section>
+
+    </main>
+
+</body>
 </html>
