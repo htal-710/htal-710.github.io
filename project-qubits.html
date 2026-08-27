@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superconducting Qubit - Harshit Agarwal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <a href="index.html" class="nav-brand">Harshit Agarwal</a>
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li>
+                <a href="projects.html">Research Projects <span class="dropdown-icon">▼</span></a>
+                <div class="dropdown-content">
+                    <a href="project-snspd.html">Single Photon Detectors</a>
+                    <a href="project-qubits.html">Superconducting Qubits</a>
+                    <a href="project-mkid.html">Superconducting Quantum Sensors</a>
+                    <a href="project-colpitts.html">Self-Colpitts Oscillator</a>
+                    <a href="project-interferometer.html">Pulse Probe Interferometer</a>
+                    <a href="project-ebeam.html">Electron Beam Evaporator</a>
+                    <a href="project-wind.html">Bio-Inspired Floating Foundations</a>
+                    <a href="project-factory.html">Digital Factory for 3-D Printing</a>
+                </div>
+            </li>
+            <li><a href="publications.html">Publications and Presentations</a></li>
+            <li><a href="cv.html">CV</a></li>
+        </ul>
+    </nav>
+
+    <main class="project-container">
+        <div class="breadcrumb">
+            <a href="projects.html">← Back to All Projects</a>
+        </div>
+
+        <h1 class="project-title">Superconducting Qubit</h1>
+        
+        <div class="project-content">
+            <h3>Abstract</h3>
+            <p>The project describes the end-to-end development of a superconducting transmon qubit chip at Missouri S&T, aiming to establish a foundation for quantum hardware research at the university. The work encompasses the theoretical design, electromagnetic simulation, and an attempt to streamline an in-house fabrication pipeline. Utilizing the SQuaDDs and Qiskit Metal framework, a four-qubit architecture was designed with individual drive lines and readout resonators multiplexed onto a central feedline. Precision simulations in Ansys HFSS and Q3D validated the target Hamiltonian parameters, including a qubit frequency of ~4.23 GHz and an anharmonicity of ~350 MHz. Due to the absence of a cleanrom and limited fabrication resources, the chip did not yield, however the simulations were successful, thus paving the way for continued quantum devices research at Missouri S&T.</p>
+            
+            <h3>Objective</h3>
+            <p>To design, fabricate and characterize a superconduting (transmon) qubit chip. This would further enable quantum device research for future students at S&T.</p>
+
+            <h3>Methodology</h3>
+            <p><strong>Design and Parameter Selection:</strong></p>
+            <ul>
+                <li>Targeted a qubit operating frequency in the 4–6 GHz range to avoid common microwave bands and ensure compatibility with dilution refrigerator thermal scales.</li>
+                <li>Utilized Qiskit Metal's Hamiltonian tools to perform Cooper pair box analysis, inverting desired frequencies and anharmonicities into required charging energy (EC) and Josephson energy (EJ) values.</li>
+                <li>Selected a "cross-shaped" shunt capacitor (X-mon) geometry to allow for multi-line coupling and minimize dielectric loss.</li>
+                <li>Designed a four-qubit chip to mitigate fabrication variances, featuring staggered λ/4 CPW readout resonators for frequency-multiplexed readout.</li>
+            </ul>
+
+            <p><strong>Electromagnetic Simulation Workflow:</strong></p>
+            <ul>
+                <li>Quasi-static Analysis: Used Ansys Q3D to extract the Maxwell capacitance matrix, verifying that the physical geometry yielded a total island capacitance of ~94.8 fF and an EC/h of ~204 MHz.</li>
+                <li>Eigenmode Simulation: Conducted 3D simulations in Ansys HFSS to identify natural mode frequencies and field distributions, ensuring eigenmode convergence through adaptive mesh refinement.</li>
+                <li>EPR Quantization: Applied the Energy Participation Ratio (EPR) method to process HFSS fields, determining the dispersive shift (χ), coupling strength (g), and the exact participation of the Josephson junction.</li>
+            </ul>
+
+            <p><strong>Fabrication and Infrastructure Development:</strong></p>
+            <ul>
+                <li>Overlap Junction Process: Followed a double-lithography sequence for vertical Al/AlOx/Al junctions, which eliminates the need for a tilting stage required by traditional shadow evaporation.</li>
+            </ul>
+
+            <img src="qubit-simulation.jpg" alt="Qubit Layout and HFSS Simulation" style="width:100%; margin:20px 0;">
+
+            <h3>Conclusion and Outlook</h3>
+            <p>While the chip did not yield due to fabrication constraints, the chip was successfully simulated on HFSS.</p>
+
+            <h3>Full Report</h3>
+<iframe src="https://drive.google.com/file/d/18FG78dTsfg1LkLIhYvbKsiQV5WKx_qs1/preview" width="100%" height="800px" style="border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-top: 20px;"></iframe>
+        </div>
+
+        <a href="projects.html" class="back-btn">Return to Projects</a>
+    </main>
+
+</body>
+</html>

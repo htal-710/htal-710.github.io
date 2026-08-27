@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superconducting Quantum Sensors - Harshit Agarwal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOP NAVIGATION BAR -->
+    <nav class="top-nav">
+        <a href="index.html" class="nav-brand">Harshit Agarwal</a>
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li>
+                <a href="projects.html">Research Projects <span class="dropdown-icon">▼</span></a>
+                <div class="dropdown-content">
+                    <a href="project-snspd.html">Single Photon Detectors</a>
+                    <a href="project-qubits.html">Superconducting Qubits</a>
+                    <a href="project-mkid.html">Superconducting Quantum Sensors</a>
+                    <a href="project-colpitts.html">Self-Colpitts Oscillator</a>
+                    <a href="project-interferometer.html">Pulse Probe Interferometer</a>
+                    <a href="project-ebeam.html">Electron Beam Evaporator</a>
+                    <a href="project-wind.html">Bio-Inspired Floating Foundations</a>
+                    <a href="project-factory.html">Digital Factory for 3-D Printing</a>
+                </div>
+            </li>
+            <li><a href="publications.html">Publications and Presentations</a></li>
+            <li><a href="cv.html">CV</a></li>
+        </ul>
+    </nav>
+
+    <!-- PROJECT CONTENT -->
+    <main class="project-container">
+        <div class="breadcrumb">
+            <a href="projects.html">← Back to All Projects</a>
+        </div>
+
+        <h1 class="project-title">Superconducting Quantum Sensors (MKIDs)</h1>
+        
+        <div class="project-content">
+            <h3>Abstract</h3>
+            <p>High-sensitivity radiation detection is essential for applications ranging from sub-millimeter astronomy to the characterization of quantum materials. Microwave Kinetic Inductance Detectors (MKIDs) represent a transformative technology in this field, leveraging the kinetic inductance effect in superconducting thin films to detect individual photons with high energy and temporal resolution. This project focuses on the development and characterization of MKID and Thermal Kinetic Inductance Detector (TKID) arrays. A primary emphasis of the current work is the establishment of a cryogenic polarization measurement system designed to evaluate sensor response at millikelvin temperatures. By integrating microwave engineering with low-temperature physics, this research aims to optimize the sensitivity and noise performance of these detectors, providing a robust platform for next-generation quantum sensing and imaging applications.</p>
+            
+            <h3>Objective</h3>
+	<!-- Image 1 with float class -->
+            <img src="horizontal.png" alt="Vacuum Chamber Assembly" class="project-image-float">
+            <ul>
+                <li>To design and characterize high-sensitivity MKID and TKID sensors for quantum-limited radiation detection.</li>
+                <li>To develop a specialized cryogenic polarization measurement system for evaluating sensor performance in a millikelvin environment.</li>
+                <li>To optimize the external quality factor (Qext) and internal quality factor (Qint) of superconducting resonators to improve energy resolution and multiplexing capabilities.</li>
+            </ul>
+
+            <h3>Methodology</h3>
+            
+            <!-- Floating image for the methodology section -->
+            <img src="mkid-cryostat.png" alt="MKID Cryogenic Setup and Optical Stack" class="project-image-float-left" style="max-width: 350px;">
+
+            <p><strong>Resonator Design and Simulation:</strong></p>
+            <ul>
+                <li>Designed quarter-wave (λ/4) and half-wave (λ/2) coplanar waveguide (CPW) resonators utilizing superconducting thin films (e.g., Al, Nb, or TiN).</li>
+                <li>Used finite-element analysis to model the kinetic inductance fraction (αk), ensuring the resonator frequency shifts are detectable upon photon absorption.</li>
+            </ul>
+            
+            <p><strong>Cryogenic Measurement Setup:</strong></p>
+            <ul>
+                <li>Integrated the sensors into a dilution refrigerator capable of reaching base temperatures in the 10–100 mK range.</li>
+                <li>Developed a polarization-sensitive readout chain to characterize the sensors' response to varying optical or microwave signal orientations.</li>
+            </ul>
+
+            <p><strong>Data Acquisition and Signal Processing:</strong></p>
+            <ul>
+                <li>Utilized homodyne detection and software-defined radio (SDR) platforms to monitor the complex transmission (S21) of the resonators.</li>
+                <li>Analyzed the phase and amplitude trajectories of the resonance circle to distinguish between thermal noise and genuine detection events.</li>
+            </ul>
+
+            <h3>Results and Discussion</h3>
+            <p><strong>Note: As this project is currently under development, this section summarizes the work done so far.</strong></p>
+            <ul>
+                <li>Preliminary designs for the cryogenic polarization system have been finalized, focusing on mitigating stray light and thermal gradients.</li>
+                <li>Initial characterization of the superconducting base films has been completed, confirming critical temperatures (Tc) and surface impedances consistent with high-quality detector performance.</li>
+                <li>Measurement protocols have been established to quantify the frequency shift and dissipation change as a function of incident power and temperature.</li>
+            </ul>
+
+            <h3>Conclusion</h3>
+            <ul>
+                <li>The establishment of the polarization measurement system marks a significant milestone in the characterization of advanced superconducting sensors.</li>
+                <li>Future work will involve full-array testing and the integration of these sensors into larger-scale experimental frameworks at NIST.</li>
+                <li>Continued optimization of the fabrication process will target higher quality factors to enable larger multiplexing ratios for high-pixel-count imaging.</li>
+            </ul>
+        </div>
+
+        <a href="projects.html" class="back-btn">Return to Projects</a>
+    </main>
+
+</body>
+</html>

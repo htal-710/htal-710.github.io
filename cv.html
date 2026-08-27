@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Harshit Agarwal</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Extra styling specific to the CV page layout */
+        .cv-container {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 40px;
+        }
+        .cv-title {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 42px;
+            color: #2c4c24;
+            margin-bottom: 25px;
+        }
+        .cv-viewer-wrapper {
+            background: #fff;
+            padding: 0; /* Removed padding so the iframe fills the box cleanly */
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            overflow: hidden; /* Ensures clean rounded corners */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP NAVIGATION BAR -->
+    <nav class="top-nav">
+        <a href="index.html" class="nav-brand">Harshit Agarwal</a>
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li>
+                <a href="projects.html">Research Projects <span class="dropdown-icon">▼</span></a>
+                <div class="dropdown-content">
+                    <a href="project-snspd.html">Single Photon Detectors</a>
+                    <a href="project-qubits.html">Superconducting Qubits</a>
+                    <a href="project-mkid.html">Superconducting Quantum Sensors</a>
+                    <a href="project-colpitts.html">Self-Colpitts Oscillator</a>
+                    <a href="project-interferometer.html">Pulse Probe Interferometer</a>
+                    <a href="project-ebeam.html">Electron Beam Evaporator</a>
+                    <a href="project-wind.html">Bio-Inspired Floating Foundations</a>
+                    <a href="project-factory.html">Digital Factory for 3-D Printing</a>
+                </div>
+            </li>
+            <li><a href="publications.html">Publications and Presentations</a></li>
+            <li><a href="cv.html">CV</a></li>
+        </ul>
+    </nav>
+
+    <!-- CV PAGE CONTENT -->
+    <main class="cv-container">
+        <h1 class="cv-title">Curriculum Vitae</h1>
+        
+        <div class="cv-viewer-wrapper">
+            <!-- Updated width to 100% and height to 1100px for a full-page view -->
+            <iframe src="https://drive.google.com/file/d/1G4oalyKZVk5gi28xz9hKMpL9dJs6RT0V/preview" width="100%" height="1100px" style="border: none; display: block;"></iframe>
+        </div>
+    </main>
+
+</body>
+</html>

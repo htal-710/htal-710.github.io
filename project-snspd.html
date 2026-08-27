@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNSPD - Harshit Agarwal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <a href="index.html" class="nav-brand">Harshit Agarwal</a>
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li>
+                <a href="projects.html">Research Projects <span class="dropdown-icon">▼</span></a>
+                <div class="dropdown-content">
+                    <a href="project-snspd.html">Single Photon Detectors</a>
+                    <a href="project-qubits.html">Superconducting Qubits</a>
+                    <a href="project-mkid.html">Superconducting Quantum Sensors</a>
+                    <a href="project-colpitts.html">Self-Colpitts Oscillator</a>
+                    <a href="project-interferometer.html">Pulse Probe Interferometer</a>
+                    <a href="project-ebeam.html">Electron Beam Evaporator</a>
+                    <a href="project-wind.html">Bio-Inspired Floating Foundations</a>
+                    <a href="project-factory.html">Digital Factory for 3-D Printing</a>
+                </div>
+            </li>
+            <li><a href="publications.html">Publications and Presentations</a></li>
+            <li><a href="cv.html">CV</a></li>
+        </ul>
+    </nav>
+
+    <main class="project-container">
+        <div class="breadcrumb">
+            <a href="projects.html">← Back to All Projects</a>
+        </div>
+
+        <h1 class="project-title">Superconducting Nanowire Single Photon Detectors (SNSPDs)</h1>
+        
+        <div class="project-content">
+            <h3>Abstract</h3>
+            <p>Angle-resolved characterization of a NbTiN superconducting nanowire single-photon detector (SNSPD) was under magnetic fields up to 14 T, enabled by continuous in-situ angle control via a cryogenic piezoelectric rotator. By measuring the switching current in the dark as a function of field magnitude and orientation, a strongly anisotropic critical-field response is identified, well described by the Tinkham anisotropic thin-film model, alongside a distinct low-field crossover in the perpendicular-field response. Together, these results establish a practical high-field operating envelope for SNSPDs and motivate applications ranging from dark-count-mechanism studies to high-field quantum sensor readout.</p>
+            
+            <h3>Objective</h3>
+            <p>To characterize the dependence of an SNSPD's dark-count rate and switching current as a function of the magnitude and orientation of an applied magnetic field up to 14 T. This precise profiling aims to define the stable operational boundaries necessary for deploying these sensors in extreme magnetic environments, ensuring reliable readout performance for advanced quantum measurements.</p>
+
+            <h3>Methodology</h3>
+            <p><strong>Cryogenic Measurement Setup:</strong></p>
+            <ul>
+                <li>The device was mounted on an attocube cryogenic piezoelectric rotator to sweep the angle (θ) between the applied field and the sample plane continuously in situ (θ=90° is out-of-plane; θ=0° is in-plane) across fields up to 14 T.</li>
+                <li>Switching current (Isw), and Dark Count Rates (DCR) measurements were conducted at 4 K and 6 K at each angle.</li>
+            </ul>
+
+            <img src="snspd-setup.jpg" alt="SNSPD Experimental Setup" style="width:100%; margin:20px 0;">
+            <p style="font-size: 14px; color: #555;">a) Side view of the experimental setup of the device in the cryostat probe. b) Front view of the sample stage (RF board + attocube). The SNSPD device is mounted on a custom gold plated RF board which is then screwed on the attocube rotator. The attocube rotator is fixed to the probe. The magnetic field points in the Z direction as denoted by the red arrows in both images.</p>
+
+            <h3>Results and Discussion</h3>
+            <p><strong>Note: As this project is currently under development, this section summarizes the work done so far.</strong></p>
+            <ul>
+                <li>A strongly anisotropic response was demonstrated through the Tinkham anisotropic fit to Bc(θ) at 4 K, matching expectations for a thin-film device with a large in-plane/out-of-plane aspect ratio.</li>
+                <li>The ~5 μA level was identified as the physically meaningful dark-count-free boundary, below which dark counts disappear entirely, establishing Isw as the operative observable without requiring a separate dark-count-rate dataset.</li>
+                <li>The low-field kink in the perpendicular response was successfully captured using the two-regime (linear / inverse power-law) fit, locating the breakpoint quantitatively rather than by eye.</li>
+                <li>Preliminary 6 K data was collected, setting the stage for formal temperature-dependence analysis pending planned millikelvin measurements.</li>
+            </ul>
+
+            <h3>Conclusion</h3>
+            <ul>
+                <li>Stable, continuously angle-resolved SNSPD operation in magnetic fields up to 14 T was demonstrated, with a critical-field anisotropy accurately described by established theoretical models rather than requiring a custom approach.</li>
+                <li>A high-field operating envelope was established that enables future efforts to disentangle specific microscopic dark-count mechanisms once complete temperature-dependent data is obtained.</li>
+                <li>This work paves the way for applying this detector platform to high-field readout contexts, directly supporting advancements in experiments such as dark-matter, nuclear physics and fundamental physics under high magnetic field.</li>
+            </ul>
+        </div>
+
+        <a href="projects.html" class="back-btn">Return to Projects</a>
+    </main>
+
+</body>
+</html>

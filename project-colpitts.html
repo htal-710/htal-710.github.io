@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Colpitts Oscillator - Harshit Agarwal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOP NAVIGATION BAR -->
+    <nav class="top-nav">
+        <a href="index.html" class="nav-brand">Harshit Agarwal</a>
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li>
+                <a href="projects.html">Research Projects <span class="dropdown-icon">▼</span></a>
+                <div class="dropdown-content">
+                    <a href="project-snspd.html">Single Photon Detectors</a>
+                    <a href="project-qubits.html">Superconducting Qubits</a>
+                    <a href="project-mkid.html">Superconducting Quantum Sensors</a>
+                    <a href="project-colpitts.html">Self-Colpitts Oscillator</a>
+                    <a href="project-interferometer.html">Pulse Probe Interferometer</a>
+                    <a href="project-ebeam.html">Electron Beam Evaporator</a>
+                    <a href="project-wind.html">Bio-Inspired Floating Foundations</a>
+                    <a href="project-factory.html">Digital Factory for 3-D Printing</a>
+                </div>
+            </li>
+            <li><a href="publications.html">Publications and Presentations</a></li>
+            <li><a href="cv.html">CV</a></li>
+        </ul>
+    </nav>
+
+    <!-- PROJECT CONTENT -->
+    <main class="project-container">
+        <div class="breadcrumb">
+            <a href="projects.html">← Back to All Projects</a>
+        </div>
+
+        <h1 class="project-title">AC Magnetic Characterization of Quantum Materials at Cryogenic Temperatures</h1>
+
+        <div class="project-content">
+            <h3>Abstract</h3>
+            <p><strong>AC magnetic measurements with a self-oscillating LC circuit and its application to university education</strong></p>
+            <p>Understanding the magnetic properties of matter plays a key role in materials physics. However, university education on fundamental magnetism is limited to a theoretical survey because of the lack of appropriate apparatus that can be applied for laboratory courses at the undergraduate level. In this work, we introduce an AC magnetometer based on the Colpitts self-oscillator with an inductor coil as a probe. We show that this type of self-oscillator can be adopted in a typical university laboratory course to learn the principles of magnetic measurement and to understand the fundamental magnetism of matter. We demonstrate the exceptional stability of the circuit with a working frequency range of ~10 kHz to 10 MHz and excellent performance to detect the diamagnetic signal from a superconductor at cryogenic temperature.</p>
+
+            <h3>Objective</h3>
+            <ul>
+                <li>To design and implement a high-precision, low-cost AC magnetometer for material characterization.</li>
+                <li>To provide an accessible experimental platform for undergraduate-level physics education on fundamental magnetism.</li>
+                <li>To validate the circuit's sensitivity by detecting phase transitions in superconducting materials at cryogenic temperatures.</li>
+            </ul>
+
+            <h3>Methodology</h3>
+            <p><strong>Circuit Design and Implementation:</strong></p>
+	    <img src="pcb.png" alt="Vacuum Chamber Assembly" class="project-image-float">
+            <ul>
+                <li>Developed a Colpitts-style self-oscillator utilizing Bipolar Junction Transistors (BJT) to maintain stable oscillations.</li>
+                <li>Utilized an LC tank circuit as the frequency-determining element, where the inductor (L) serves as the sensing probe for magnetic samples.</li>
+                <li>Selected component values to ensure a wide tunable frequency range (10 kHz to 10 MHz), allowing for the study of frequency-dependent magnetic responses.</li>
+                <li>Implemented a simple power supply and signal output interface compatible with standard laboratory oscilloscopes and frequency counters.</li>
+            </ul>
+
+            <p><strong>Sensing Mechanism:</strong></p>
+            <ul>
+                <li>The operating principle relies on the shift in the inductor's resonance frequency (Δf) when a magnetic sample is inserted.</li>
+                <li>The frequency change is directly related to the magnetic susceptibility (χ) of the sample, as the sample alters the effective permeability and thus the inductance of the probe.</li>
+                <li>The circuit was designed to achieve high frequency stability (potential precision of 0.001 ppm), enabling the detection of minute changes in magnetism.</li>
+            </ul>
+
+            <p><strong>Cryogenic Measurement Setup:</strong></p>
+	    <img src="sm.png" alt="Vacuum Chamber Assembly" class="project-image-float">
+            <ul>
+                <li>Constructed a "dipper-type" probe to allow the inductor and sample to be submerged in cryogenic fluids like liquid nitrogen (77 K).</li>
+                <li>Conducted tests to ensure the BJT-based oscillator remained functional at low temperatures, noting that while the oscillation amplitude decreases at 77 K, signal quality remains sufficient for measurement.</li>
+            </ul>
+
+            <p><strong>Validation and Data Analysis:</strong></p>
+            <ul>
+                <li>Used a YBCO (Yttrium Barium Copper Oxide) high-temperature superconductor as a test sample.</li>
+                <li>Monitored the resonance frequency while cooling the sample through its transition temperature (Tc).</li>
+                <li>Calculated the magnetic susceptibility based on the observed frequency jump, providing a clear visual and quantitative demonstration of the Meissner effect (perfect diamagnetism).</li>
+            </ul>
+
+            <h3>Results and Discussion</h3>
+            <ul>
+                <li>The circuit demonstrated exceptional stability over hours of operation at both room and cryogenic temperatures.</li>
+                <li>Cryogenic testing with YBCO revealed a sharp frequency increase at approximately 82 K, marking the onset of the superconducting state.</li>
+                <li>The experiment proved that a transistor-powered oscillator can effectively replace more expensive commercial magnetometers (like SQUIDs) for educational and fundamental research purposes.</li>
+            </ul>
+
+            <h3>Conclusion</h3>
+            <ul>
+                <li>The Colpitts self-oscillator is a robust and sensitive tool for investigating the magnetic properties of matter.</li>
+                <li>The project successfully established a cost-effective experimental framework that bridges the gap between theoretical magnetism and hands-on laboratory experience.</li>
+            </ul>
+
+            <h3>Full Report</h3>
+            <!-- Embedded arXiv PDF Viewer -->
+            <iframe src="https://arxiv.org/pdf/2506.16709.pdf" width="100%" height="800px" style="border: 1px solid #ccc;"></iframe>
+        </div>
+
+        <a href="projects.html" class="back-btn">Return to Projects</a>
+    </main>
+
+</body>
+</html>

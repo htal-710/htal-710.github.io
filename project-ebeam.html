@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electron Beam Evaporator - Harshit Agarwal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOP NAVIGATION BAR -->
+    <nav class="top-nav">
+        <a href="index.html" class="nav-brand">Harshit Agarwal</a>
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li>
+                <a href="projects.html">Research Projects <span class="dropdown-icon">▼</span></a>
+                <div class="dropdown-content">
+                    <a href="project-snspd.html">Single Photon Detectors</a>
+                    <a href="project-qubits.html">Superconducting Qubits</a>
+                    <a href="project-mkid.html">Superconducting Quantum Sensors</a>
+                    <a href="project-colpitts.html">Self-Colpitts Oscillator</a>
+                    <a href="project-interferometer.html">Pulse Probe Interferometer</a>
+                    <a href="project-ebeam.html">Electron Beam Evaporator</a>
+                    <a href="project-wind.html">Bio-Inspired Floating Foundations</a>
+                    <a href="project-factory.html">Digital Factory for 3-D Printing</a>
+                </div>
+            </li>
+            <li><a href="publications.html">Publications and Presentations</a></li>
+            <li><a href="cv.html">CV</a></li>
+        </ul>
+    </nav>
+
+    <!-- PROJECT CONTENT -->
+    <main class="project-container">
+        <div class="breadcrumb">
+            <a href="projects.html">← Back to All Projects</a>
+        </div>
+
+        <h1 class="project-title">Electron Beam Evaporator</h1>
+
+        <div class="project-content">
+            <h3>Abstract</h3>
+            <p>Physical Vapor Deposition (PVD) is a cornerstone of nanotechnology, yet access to specialized deposition equipment is often a bottleneck for departmental research. As part of a collaborative group project, we addressed the absence of such facilities at Missouri S&T by assembling, commissioning, and characterizing a custom electron-beam (e-beam) deposition chamber. This system utilizes thermionic emission from a tantalum filament to generate a high-energy electron beam, which is then accelerated and steered toward a target material to induce evaporation in a high-vacuum environment. The project involved the integration of a multi-stage vacuum stack, the development of beam control electronics, and the validation of the system through the deposition of aluminum thin films. By characterizing the resulting films via ellipsometry and conductivity measurements, the group successfully established a functional research tool capable of supporting the fabrication of advanced quantum and electronic devices.</p>
+
+            <h3>Objective</h3>
+            
+            <!-- Image 1 with float class -->
+            <img src="ebeam-diagram.jpg" alt="Electron Beam Evaporator Diagram" class="project-image-float">
+            
+            <ul>
+                <li>To assemble a functional e-beam deposition chamber from discrete vacuum and electronic components for the Physics department.</li>
+                <li>To achieve and maintain high-vacuum base pressures (below 10^-7 Torr) necessary for high-purity thin-film growth.</li>
+                <li>To develop stable beam steering and power ramping protocols to ensure uniform material evaporation and deposition.</li>
+                <li>To validate the system by depositing and characterizing the optical and electrical properties of nanometer-scale thin films.</li>
+            </ul>
+
+            <h3>Methodology</h3>
+            
+            <p><strong>Vacuum Infrastructure and Assembly:</strong></p>
+            <!-- Image 2 with float class -->
+            <img src="ebeam-chamber.jpg" alt="Vacuum Chamber Assembly" class="project-image-float">
+            <ul>
+                <li>Assembled a stainless-steel vacuum chamber using pre-prepared components, ensuring all seals were helium leak-tested.</li>
+                <li>Integrated a two-stage pumping system: a dry (oil-free) scroll pump for initial roughing and a turbomolecular pump for reaching high-vacuum regimes.</li>
+                <li>Monitored internal pressure using high-vacuum gauges to verify base pressures as low as 4.13 × 10^-8 Torr.</li>
+            </ul>
+
+            <p><strong>E-Beam Source and Control Development:</strong></p>
+            <!-- Image 3 with float class -->
+            <img src="ebeam-filament.jpg" alt="E-Beam Source and Filament" class="project-image-float">
+            <ul>
+                <li>Configured an electron gun using thermionic emission from a tantalum filament.</li>
+                <li>Developed control logic for filament current and accelerating bias voltage to maintain a stable beam.</li>
+                <li>Designed and implemented an electrostatic focusing system to confine the beam to the center of the crucible pocket.</li>
+                <li>Prototyped a solenoid coil for magnetic beam deflection to allow for future rastering and heat load management.</li>
+            </ul>
+
+            <p><strong>Deposition and Thin-Film Characterization:</strong></p>
+            <!-- Image 4 with float class -->
+            <img src="ebeam-probe.jpg" alt="Four-Point Probe Testing" class="project-image-float">
+            <ul>
+                <li>Performed deposition runs using aluminum targets on silicon and glass substrates.</li>
+                <li>Utilized an ellipsometer to measure film thickness, reflectivity, and polarization, identifying films on the scale of ~1214 Å.</li>
+                <li>Conducted conductivity testing using a lock-in amplifier and a four-point probe method to assess the electrical quality of the deposited layers.</li>
+            </ul>
+
+            <h3>Results and Discussion</h3>
+            <ul>
+                <li>The system successfully attained a high-vacuum base pressure of 5×10^-8 Torr in an empty chamber, which is critical for preventing film contamination.</li>
+                <li>Deposition tests confirmed the ability to grow thin films, though initial characterization showed some unevenness in coverage, highlighting the need for refined beam steering.</li>
+                <li>Conductivity and polarization measurements confirmed that the deposited aluminum maintained its metallic properties, validating the system's effectiveness for circuit fabrication.</li>
+            </ul>
+
+            <h3>Conclusion</h3>
+            <ul>
+                <li>The group successfully delivered a functional e-beam deposition chamber that provides a new capability for the department's experimental toolbox.</li>
+                <li>This project laid the groundwork for the in-house fabrication of superconducting Josephson junctions, demonstrating a viable pathway for domestic quantum hardware production.</li>
+            </ul>
+
+            <h3>Full Report</h3>
+            <!-- Interactive PDF Viewer at bottom (unaffected by float) -->
+            <iframe src="https://drive.google.com/file/d/1WJ_k7nouCxkq2xER6Du3ioULcZ2B3LB3/preview" width="100%" height="800px" style="border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-top: 20px;"></iframe>
+        </div>
+
+        <a href="projects.html" class="back-btn">Return to Projects</a>
+    </main>
+
+</body>
+</html>

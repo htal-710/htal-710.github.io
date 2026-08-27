@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse Probe Interferometer - Harshit Agarwal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOP NAVIGATION BAR -->
+    <nav class="top-nav">
+        <a href="index.html" class="nav-brand">Harshit Agarwal</a>
+        <ul class="nav-links">
+            <li><a href="index.html">About</a></li>
+            <li>
+                <a href="projects.html">Research Projects <span class="dropdown-icon">▼</span></a>
+                <div class="dropdown-content">
+                    <a href="project-snspd.html">Single Photon Detectors</a>
+                    <a href="project-qubits.html">Superconducting Qubits</a>
+                    <a href="project-mkid.html">Superconducting Quantum Sensors</a>
+                    <a href="project-colpitts.html">Self-Colpitts Oscillator</a>
+                    <a href="project-interferometer.html">Pulse Probe Interferometer</a>
+                    <a href="project-ebeam.html">Electron Beam Evaporator</a>
+                    <a href="project-wind.html">Bio-Inspired Floating Foundations</a>
+                    <a href="project-factory.html">Digital Factory for 3-D Printing</a>
+                </div>
+            </li>
+            <li><a href="publications.html">Publications and Presentations</a></li>
+            <li><a href="cv.html">CV</a></li>
+        </ul>
+    </nav>
+
+    <!-- PROJECT CONTENT -->
+    <main class="project-container">
+        <div class="breadcrumb">
+            <a href="projects.html">← Back to All Projects</a>
+        </div>
+
+        <h1 class="project-title">Interferometer for Pulse Probe Experiment</h1>
+
+        <div class="project-content">
+            <h3>Abstract</h3>
+            <p>Accurate temporal control is critical in atomic physics for characterizing transitions in Rydberg states, such as those in Lithium atoms. This project details the construction and characterization of a Michelson-style interferometer designed to control the optical path difference between two laser pulses, effectively serving as a high-precision delay line for pump-probe experiments. A single laser source is split into two independent arms, where one arm's path length is modulated via a cat-eye mirror assembly mounted on a high-resolution translation stage. By utilizing a stepper motor with a 40:1 worm gear reduction, sub-micrometer positional control was achieved. The resulting interference patterns were analyzed in the frequency domain using Fast Fourier Transforms (FFT) and Short-Time Fourier Transforms (STFT) to characterize mechanical stability and verify the relationship between stepping rates and fringe frequencies. This setup provides a robust prototype for future experiments requiring attosecond-to-picosecond time-delay resolution</p>
+
+            <h3>Objective</h3>
+            <ul>
+                <li>To design and build a Michelson interferometer capable of precise optical path length modulation.</li>
+                <li>To characterize the relationship between mechanical translation and the resulting interference fringe frequency.</li>
+                <li>To establish a stable prototype for controlling the time delay (δt) between pump and probe pulses in atomic Rydberg state transitions.</li>
+            </ul>
+
+            <h3>Methodology</h3>
+            <p><strong>Optical Configuration:</strong></p>
+            <ul>
+                <li>Constructed a Michelson-style interferometer using a 671 nm laser source.</li>
+                <li>Implemented a polarizing beam splitter to divide the initial beam into two orthogonal arms.</li>
+                <li>Utilized "cat-eye" mirror setups—consisting of a lens and a mirror—to ensure the reflected beams remained parallel to the incident beams, significantly reducing sensitivity to mechanical misalignment.</li>
+                <li>Used quarter-wave plates in each arm to rotate the polarization, allowing the beams to recombine and interfere at a final detector.</li>
+            </ul>
+
+            <p><strong>Mechanical Control System:</strong></p>
+            <ul>
+                <li>Mounted one arm on a linear translation stage driven by a NEMA 17 stepper motor.</li>
+                <li>Integrated a 40:1 worm gear reduction system to convert the motor's rotational steps into fine linear movement.</li>
+                <li>Controlled the motor via an Arduino, programmed to move the stage in discrete steps followed by a "settling" delay to mitigate mechanical vibrations.</li>
+            </ul>
+
+            <p><strong>Signal Acquisition and Processing:</strong></p>
+            <ul>
+                <li>Captured interference patterns using a photodiode to measure intensity variations as the path length changed.</li>
+                <li>Developed a normalization circuit using a second photodiode to account for fluctuations in the laser's initial power or polarization drift.</li>
+                <li>Processed the voltage signals using Python, performing FFT to identify the dominant fringe frequency and STFT to monitor frequency stability over time.</li>
+            </ul>
+
+            <!-- Replace 'if-setup.png' with your actual image file name -->
+            <img src="if-setup.png" alt="Interferometer Optical Setup" style="width:100%; margin:20px 0; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+
+            <h3>Results and Discussion</h3>
+            <ul>
+                <li>Observed clear, high-contrast interference fringes during continuous stage movement.</li>
+                <li>FFT analysis identified a dominant fringe frequency of 1.358 Hz for a given stepping rate.</li>
+                <li>Comparison with the theoretical expected frequency (1.247 Hz) revealed an 11.1% error, which was attributed to mechanical backlashes and vibrations in the non-rigid motor mounting.</li>
+                <li>Short-Time Fourier Transform (STFT) plots confirmed that the fringe frequency remained consistent throughout the scan, though mechanical "ringing" was visible immediately after each motor step.</li>
+            </ul>
+
+            <!-- Replace 'interferometer-results.jpg' with your actual image file name -->
+            <img src="interferometer-results.jpg" alt="Interferometer FFT Results" style="width:100%; margin:20px 0; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+
+            <h3>Conclusion</h3>
+            <ul>
+                <li>The interferometer successfully demonstrated the ability to modulate optical path differences with high precision.</li>
+                <li>The integration of FFT-based analysis provided a powerful tool for characterizing the mechanical performance of the translation system.</li>
+                <li>Future iterations will focus on improving the rigidity of the motor mount and implementing closed-loop feedback to eliminate the observed 11% frequency error.</li>
+            </ul>
+
+            <h3>Full Report</h3>
+            <!-- Embedded Google Drive PDF Viewer -->
+            <iframe src="https://drive.google.com/file/d/1fjQsrHhQoAtWIp2XCgYU-YdwF0BhUwms/preview" width="100%" height="800px" style="border: none;"></iframe>
+        </div>
+
+        <a href="projects.html" class="back-btn">Return to Projects</a>
+    </main>
+
+</body>
+</html>
