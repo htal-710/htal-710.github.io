@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Self-Colpitts Oscillator - Harshit Agarwal</title>
+    <title>AC Magnetic Characterization of Quantum Materials at Cryogenic Temperatures - Harshit Agarwal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- TOP NAVIGATION BAR -->
+<div class="page-header-band">
     <nav class="top-nav">
         <a href="index.html" class="nav-brand">Harshit Agarwal</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"><span></span><span></span><span></span></label>
         <ul class="nav-links">
             <li><a href="index.html">About</a></li>
-            <li>
-                <a href="projects.html">Research Projects <span class="dropdown-icon">▼</span></a>
+            <li class="has-dropdown">
+                <a href="projects.html" class="dropdown-trigger-desktop">Research Projects <span class="dropdown-icon">▼</span></a>
+                <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle-checkbox">
+                <label for="dropdown-toggle" class="dropdown-trigger-mobile">Research Projects <span class="dropdown-icon">▼</span></label>
                 <div class="dropdown-content">
                     <a href="project-snspd.html">Single Photon Detectors</a>
                     <a href="project-qubits.html">Superconducting Qubits</a>
@@ -30,15 +36,14 @@
             <li><a href="cv.html">CV</a></li>
         </ul>
     </nav>
+    <div class="page-header-inner" style="padding-top:22px;">
+        <div class="breadcrumb"><a href="projects.html">&larr; Back to All Projects</a></div>
+        <h1 class="page-title" style="font-size:34px;">AC Magnetic Characterization of Quantum Materials at Cryogenic Temperatures</h1>
+        <div style="margin-top:16px;"><span class="tag">10 kHz &ndash; 10 MHz</span><span class="tag">AC magnetometry</span><span class="tag">Cryogenic</span></div>
+    </div>
+</div>
 
-    <!-- PROJECT CONTENT -->
     <main class="project-container">
-        <div class="breadcrumb">
-            <a href="projects.html">← Back to All Projects</a>
-        </div>
-
-        <h1 class="project-title">AC Magnetic Characterization of Quantum Materials at Cryogenic Temperatures</h1>
-
         <div class="project-content">
             <h3>Abstract</h3>
             <p><strong>AC magnetic measurements with a self-oscillating LC circuit and its application to university education</strong></p>
@@ -53,7 +58,7 @@
 
             <h3>Methodology</h3>
             <p><strong>Circuit Design and Implementation:</strong></p>
-	    <img src="pcb.png" alt="Vacuum Chamber Assembly" class="project-image-float">
+            <img src="pcb.png" alt="Colpitts Oscillator PCB" class="project-image-float">
             <ul>
                 <li>Developed a Colpitts-style self-oscillator utilizing Bipolar Junction Transistors (BJT) to maintain stable oscillations.</li>
                 <li>Utilized an LC tank circuit as the frequency-determining element, where the inductor (L) serves as the sensing probe for magnetic samples.</li>
@@ -63,13 +68,13 @@
 
             <p><strong>Sensing Mechanism:</strong></p>
             <ul>
-                <li>The operating principle relies on the shift in the inductor's resonance frequency (Δf) when a magnetic sample is inserted.</li>
-                <li>The frequency change is directly related to the magnetic susceptibility (χ) of the sample, as the sample alters the effective permeability and thus the inductance of the probe.</li>
+                <li>The operating principle relies on the shift in the inductor's resonance frequency (&Delta;f) when a magnetic sample is inserted.</li>
+                <li>The frequency change is directly related to the magnetic susceptibility (&chi;) of the sample, as the sample alters the effective permeability and thus the inductance of the probe.</li>
                 <li>The circuit was designed to achieve high frequency stability (potential precision of 0.001 ppm), enabling the detection of minute changes in magnetism.</li>
             </ul>
 
             <p><strong>Cryogenic Measurement Setup:</strong></p>
-	    <img src="sm.png" alt="Vacuum Chamber Assembly" class="project-image-float">
+            <img src="sm.png" alt="Cryogenic Dipper Probe Setup" class="project-image-float">
             <ul>
                 <li>Constructed a "dipper-type" probe to allow the inductor and sample to be submerged in cryogenic fluids like liquid nitrogen (77 K).</li>
                 <li>Conducted tests to ensure the BJT-based oscillator remained functional at low temperatures, noting that while the oscillation amplitude decreases at 77 K, signal quality remains sufficient for measurement.</li>
@@ -96,12 +101,19 @@
             </ul>
 
             <h3>Full Report</h3>
-            <!-- Embedded arXiv PDF Viewer -->
-            <iframe src="https://arxiv.org/pdf/2506.16709.pdf" width="100%" height="800px" style="border: 1px solid #ccc;"></iframe>
+            <iframe src="https://arxiv.org/pdf/2506.16709.pdf" width="100%" height="800px"></iframe>
         </div>
-
         <a href="projects.html" class="back-btn">Return to Projects</a>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/harshit-agarwal-a88b75256/" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="sep">&middot;</span>
+            <a href="mailto:hagarwal@umd.edu">Email</a>
+        </div>
+        <div class="sub">University of Maryland, College Park</div>
+    </footer>
 
 </body>
 </html>

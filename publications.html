@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications and Presentations - Harshit Agarwal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- TOP NAVIGATION BAR -->
+<div class="page-header-band">
     <nav class="top-nav">
         <a href="index.html" class="nav-brand">Harshit Agarwal</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"><span></span><span></span><span></span></label>
         <ul class="nav-links">
             <li><a href="index.html">About</a></li>
-            <li>
-                <a href="projects.html">Research Projects <span class="dropdown-icon">▼</span></a>
+            <li class="has-dropdown">
+                <a href="projects.html" class="dropdown-trigger-desktop">Research Projects <span class="dropdown-icon">▼</span></a>
+                <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle-checkbox">
+                <label for="dropdown-toggle" class="dropdown-trigger-mobile">Research Projects <span class="dropdown-icon">▼</span></label>
                 <div class="dropdown-content">
                     <a href="project-snspd.html">Single Photon Detectors</a>
                     <a href="project-qubits.html">Superconducting Qubits</a>
@@ -30,79 +36,79 @@
             <li><a href="cv.html">CV</a></li>
         </ul>
     </nav>
+    <div class="page-header-inner" style="padding-top:22px;">
+        <div class="page-eyebrow">§ talks &amp; posters</div>
+        <h1 class="page-title">Publications and Presentations</h1>
+    </div>
+</div>
 
-    <!-- HERO BANNER -->
-    <header class="hero-banner">
-        <div class="hero-overlay"></div>
-        <h1 class="hero-title">Publications and Presentations</h1>
-    </header>
-
-    <!-- MAIN CONTENT -->
     <main class="pub-container">
-        
-        <!-- ITEM 1: Cosmic Microwave Background -->
         <article class="pub-item">
             <h2 class="pub-title">Tracing the Cosmic Microwave Background: Polarization Detection with Superconducting Kinetic Inductance Detectors</h2>
             <div class="pub-content-row">
-                <div class="pub-img-placeholder">Image Placeholder</div>
+                <div class="pub-img-placeholder">[ image ]</div>
                 <div class="pub-details">
-                    <div class="pub-detail-row">
-                        <span class="pub-role">Plenary Presentation, SURF Colloquium 2025<br><span style="font-size: 13px; font-weight: normal; color: #666;">National Institute of Standards and Technology (NIST)</span></span>
-                        <span class="pub-date">July 2025</span>
-                    </div>
-                    <div class="pub-detail-row">
-                        <span class="pub-role">Poster Presentation, Fermilab Quantum Showcase</span>
-                        <span class="pub-date">December 2025</span>
-                    </div>
+                <div class="pub-detail-row">
+                    <span class="pub-role">Plenary Presentation, SURF Colloquium 2025<span class="venue-sub"><br>National Institute of Standards and Technology (NIST)</span></span>
+                    <span class="pub-date">July 2025</span>
+                </div>
+                <div class="pub-detail-row">
+                    <span class="pub-role">Poster Presentation, Fermilab Quantum Showcase</span>
+                    <span class="pub-date">December 2025</span>
+                </div>
                 </div>
             </div>
         </article>
-
-        <!-- ITEM 2: LC Self-Oscillator (Image on Left, Reverse Layout) -->
         <article class="pub-item">
             <h2 class="pub-title">Development of an LC Self-Oscillator for Magnetic Measurements at Cryogenic Temperatures</h2>
             <div class="pub-content-row reverse">
-                <div class="pub-img-placeholder">Image Placeholder</div>
+                <div class="pub-img-placeholder">[ image ]</div>
                 <div class="pub-details">
-                    <div class="pub-detail-row">
-                        <span class="pub-role">Fuller UG Research Competition, Missouri S&T</span>
-                        <span class="pub-date">May 2025</span>
-                    </div>
-                    <div class="pub-detail-row">
-                        <span class="pub-role">FYRE Research Showcase, Missouri S&T</span>
-                        <span class="pub-date">May 2025</span>
-                    </div>
-                    <div class="pub-detail-row">
-                        <span class="pub-role">APS Global Summit – DCMP Poster Session</span>
-                        <span class="pub-date">March 2025</span>
-                    </div>
+                <div class="pub-detail-row">
+                    <span class="pub-role">Fuller UG Research Competition, Missouri S&amp;T</span>
+                    <span class="pub-date">May 2025</span>
+                </div>
+                <div class="pub-detail-row">
+                    <span class="pub-role">FYRE Research Showcase, Missouri S&amp;T</span>
+                    <span class="pub-date">May 2025</span>
+                </div>
+                <div class="pub-detail-row">
+                    <span class="pub-role">APS Global Summit &ndash; DCMP Poster Session</span>
+                    <span class="pub-date">March 2025</span>
+                </div>
                 </div>
             </div>
         </article>
-
-        <!-- ITEM 3: Bio-inspired Floating Foundations -->
         <article class="pub-item">
             <h2 class="pub-title">Bio-inspired Floating Foundations for Offshore Wind Energy</h2>
             <div class="pub-content-row">
-                <div class="pub-img-placeholder">Image Placeholder</div>
+                <div class="pub-img-placeholder">[ image ]</div>
                 <div class="pub-details">
-                    <div class="pub-detail-row">
-                        <span class="pub-role">APS Global Summit – GERA Energy Workshop</span>
-                        <span class="pub-date">March 2025</span>
-                    </div>
-                    <div class="pub-detail-row">
-                        <span class="pub-role">APS Division of Fluid Dynamics</span>
-                        <span class="pub-date">November 2024</span>
-                    </div>
-                    <div class="pub-detail-row">
-                        <span class="pub-role">CWRU Summer Research Symposium</span>
-                        <span class="pub-date">August 2024</span>
-                    </div>
+                <div class="pub-detail-row">
+                    <span class="pub-role">APS Global Summit &ndash; GERA Energy Workshop</span>
+                    <span class="pub-date">March 2025</span>
+                </div>
+                <div class="pub-detail-row">
+                    <span class="pub-role">APS Division of Fluid Dynamics</span>
+                    <span class="pub-date">November 2024</span>
+                </div>
+                <div class="pub-detail-row">
+                    <span class="pub-role">CWRU Summer Research Symposium</span>
+                    <span class="pub-date">August 2024</span>
+                </div>
                 </div>
             </div>
         </article>
-
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/harshit-agarwal-a88b75256/" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="sep">&middot;</span>
+            <a href="mailto:hagarwal@umd.edu">Email</a>
+        </div>
+        <div class="sub">University of Maryland, College Park</div>
+    </footer>
 
 </body>
 </html>

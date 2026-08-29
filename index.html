@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harshit Agarwal - About</title>
-    <!-- THIS IS THE MAGIC LINE -->
+    <title>Harshit Agarwal — Physics PhD Student, UMD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="hero-band">
     <nav class="top-nav">
         <a href="index.html" class="nav-brand">Harshit Agarwal</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"><span></span><span></span><span></span></label>
         <ul class="nav-links">
             <li><a href="index.html">About</a></li>
-            <li>
-                <a href="projects.html">Research Projects <span class="dropdown-icon">▼</span></a>
+            <li class="has-dropdown">
+                <a href="projects.html" class="dropdown-trigger-desktop">Research Projects <span class="dropdown-icon">▼</span></a>
+                <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle-checkbox">
+                <label for="dropdown-toggle" class="dropdown-trigger-mobile">Research Projects <span class="dropdown-icon">▼</span></label>
                 <div class="dropdown-content">
                     <a href="project-snspd.html">Single Photon Detectors</a>
                     <a href="project-qubits.html">Superconducting Qubits</a>
@@ -30,34 +36,83 @@
             <li><a href="cv.html">CV</a></li>
         </ul>
     </nav>
-
-    <main class="about-container">
-        <h1 class="page-title">Harshit Agarwal</h1>
-        <section class="education-split">
-            <div class="education-left">
-                <div class="edu-details">
-                    <div class="edu-row"><span>Graduate Student</span><span class="edu-date">2026 – Present</span></div>
-                    <div class="edu-row"><span>PhD Physics, University of Maryland</span><span class="edu-date"></span></div>
-                </div>
-                <div class="edu-details">
-                    <div class="edu-row"><span>BS Physics, Minor Electrical Engineering</span><span class="edu-date">2025</span></div>
-                    <div class="edu-row"><span>Missouri University of Science and Technology</span><span class="edu-date">GPA: 3.96</span></div>
-                </div>
+    <div class="hero">
+        <div>
+            <div class="hero-note">physicist by mind — engineer by heart</div>
+            <h1 class="name">Harshit Agarwal</h1>
+            <p class="tagline">PhD student in <b>Physics</b> at the University of Maryland, building cryogenic instrumentation for <b>quantum sensing</b> and superconducting devices.</p>
+            <div class="hero-links">
+                <a href="projects.html" class="btn primary">View research</a>
+                <a href="cv.html" class="btn">Download CV</a>
             </div>
-            <div class="profile-right">
-                <img src="profile.jpg" alt="Harshit Agarwal" class="profile-img">
-            </div>
-        </section>
+        </div>
+        <div>
+            <div class="profile-block">[ profile photo ]</div>
+            <div class="fig-cap">fig. 1 — profile</div>
+        </div>
+    </div>
+</div>
 
-        <section class="bio-section">
-            <p>I see myself as a physicist by mind and an engineer by heart. I'm interested in understanding how physics can be translated into technologies that solve real-world problems, and in designing probes that make sense of an otherwise mysterious universe.</p>
+<div class="wrap">
+
+    <div class="margin-row">
+        <div class="margin-note">about<span class="sub">on approach</span></div>
+        <div class="margin-body">
+            <p><strong>I see myself as a physicist by mind and an engineer by heart.</strong> I'm interested in understanding how physics can be translated into technologies that solve real-world problems, and in designing probes that make sense of an otherwise mysterious universe.</p>
             <p>My work sits at the intersection of quantum technologies, condensed matter physics, optics, and advanced engineering, with a particular focus on superconducting systems, quantum sensing, photonics, and hybrid quantum platforms. I'm drawn to problems where understanding the physics is only the first step: building the hardware, developing the measurement technique, and analyzing the data all matter just as much.</p>
             <p>My research experience spans several of these areas. In superconductivity research, I developed a cryogenic polarization-response setup for MKIDs and characterized SNSPDs at high magnetic field, working across cryogenic electronics, instrumentation, and data acquisition. In advanced manufacturing, I worked on laser-based metal additive manufacturing, developing software and sensing systems for real-time process monitoring and, eventually, machine-learning-based feedback control. I've also worked on quantum optics experiments involving color-center-based quantum sensing, interferometry, single photons, and entanglement.</p>
             <p>These experiences have shaped how I approach research. I value collaboration within a team, across labs, and across disciplines and believe the most novel, impactful ideas tend to emerge at the intersection of fields; quantum engineering itself sits at the crossing of ECE, CS, and physics. I especially enjoy the process of turning an idea into something that can actually be built, measured, tested, and improved. My interests extend beyond any single subfield, from superconducting quantum systems to nanophotonics and hybrid quantum platforms.</p>
             <p>Outside the lab, I enjoy building things and building technical communities. I've worked on engineering design teams, helped organize STEM outreach, served as an APS Physics Student Ambassador, and founded a Quantum Computing Club to give students a place to learn, build, and collaborate.</p>
             <p>Beyond research world I enjoy playing football (soccer), chess, hiking, martial arts, adventure sports, cognitive science, and philosophy (especially eastern mysticism such as vedas).</p>
-        </section>
-    </main>
+        </div>
+    </div>
+
+    <div class="margin-row">
+        <div class="margin-note">education<span class="sub">timeline</span></div>
+        <div>
+            <div class="edu-row">
+                <div><div class="role">PhD Physics</div><div class="inst">University of Maryland</div></div>
+                <div class="date">2026 — Present</div>
+            </div>
+            <div class="edu-row">
+                <div><div class="role">BS Physics, Minor Electrical Engineering</div><div class="inst">Missouri University of Science &amp; Technology</div></div>
+                <div class="date">2025</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="margin-row">
+        <div class="margin-note">research<span class="sub">featured</span></div>
+        <div>
+            <div class="proj">
+                <div><img class="proj-img" src="snspd.png" alt="SNSPD device"></div>
+                <div>
+                    <span class="tag">0 &ndash; 14 T &middot; NbTiN SNSPD</span>
+                    <div class="proj-label"><a href="project-snspd.html" style="color:inherit; text-decoration:none;">Angle-Resolved SNSPD Characterization</a></div>
+                    <p class="proj-desc">Characterizing Superconducting Nanowire Single Photon Detectors in extreme, high-magnetic-field environments to unlock new pathways for dark matter detection and fundamental physics discoveries.</p>
+                </div>
+            </div>
+            <div class="proj">
+                <div><img class="proj-img" src="mkid-cryostat.png" alt="MKID cryostat"></div>
+                <div>
+                    <span class="tag">Cryogenic instrumentation</span>
+                    <div class="proj-label"><a href="project-mkid.html" style="color:inherit; text-decoration:none;">Superconducting Quantum Sensors (MKIDs)</a></div>
+                    <p class="proj-desc">Engineered the mechanical cryogenic polarization response system for Microwave Kinetic Inductance Detectors operating below 100mK at NIST.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/harshit-agarwal-a88b75256/" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="sep">&middot;</span>
+            <a href="mailto:hagarwal@umd.edu">Email</a>
+        </div>
+        <div class="sub">University of Maryland, College Park</div>
+    </footer>
 
 </body>
 </html>

@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Projects - Harshit Agarwal</title>
-    <!-- LINK TO CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+<div class="page-header-band">
     <nav class="top-nav">
         <a href="index.html" class="nav-brand">Harshit Agarwal</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"><span></span><span></span><span></span></label>
         <ul class="nav-links">
             <li><a href="index.html">About</a></li>
-            <li>
-                <a href="projects.html">Research Projects <span class="dropdown-icon">▼</span></a>
+            <li class="has-dropdown">
+                <a href="projects.html" class="dropdown-trigger-desktop">Research Projects <span class="dropdown-icon">▼</span></a>
+                <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle-checkbox">
+                <label for="dropdown-toggle" class="dropdown-trigger-mobile">Research Projects <span class="dropdown-icon">▼</span></label>
                 <div class="dropdown-content">
                     <a href="project-snspd.html">Single Photon Detectors</a>
                     <a href="project-qubits.html">Superconducting Qubits</a>
@@ -31,14 +36,14 @@
             <li><a href="cv.html">CV</a></li>
         </ul>
     </nav>
-
-    <header class="hero-banner">
-        <div class="hero-overlay"></div>
-        <h1 class="hero-title">Research Projects</h1>
-    </header>
+    <div class="page-header-inner" style="padding-top:22px;">
+        <div class="page-eyebrow">§ full catalogue</div>
+        <h1 class="page-title">Research Projects</h1>
+        <p class="page-subtitle">Cryogenic instrumentation, quantum sensing, and hardware across superconducting devices, optics, and applied engineering.</p>
+    </div>
+</div>
 
     <main class="projects-container">
-        
         <article class="project-row">
             <div class="project-image"><a href="project-snspd.html"><img src="snspd.png" alt="Single Photon Detectors"></a></div>
             <div class="project-text">
@@ -46,15 +51,13 @@
                 <p><strong>Probing the dark universe.</strong> We are characterizing Superconducting Nanowire Single Photon Detectors (SNSPDs) in extreme, high-magnetic-field environments to unlock new pathways for dark matter detection and fundamental physics discoveries.</p>
             </div>
         </article>
-
         <article class="project-row reverse">
             <div class="project-image"><a href="project-qubits.html"><img src="qubit.png" alt="Superconducting Qubits"></a></div>
             <div class="project-text">
                 <h2><a href="project-qubits.html">Superconducting Qubits</a></h2>
-                <p><strong>Forging a new baseline for quantum computing.</strong> We spearheaded the design, simulation, fabrication, and testing of the first proof-of-concept superconducting qubit at Missouri S&T, laying the groundwork for future device development.</p>
+                <p><strong>Forging a new baseline for quantum computing.</strong> We spearheaded the design, simulation, fabrication, and testing of the first proof-of-concept superconducting qubit at Missouri S&amp;T, laying the groundwork for future device development.</p>
             </div>
         </article>
-
         <article class="project-row">
             <div class="project-image"><a href="project-mkid.html"><img src="mkid.png" alt="Superconducting Quantum Sensors"></a></div>
             <div class="project-text">
@@ -62,23 +65,20 @@
                 <p><strong>Unlocking the Cosmic Microwave Background.</strong> Operating at the National Institute of Standards and Technology (NIST), I engineered the mechanical cryogenic polarization response system for Microwave Kinetic Inductance Detectors (MKIDs) operating below 100mK.</p>
             </div>
         </article>
-
         <article class="project-row reverse">
-            <div class="project-image"><a href="project-colpitts.html"><img src="img-colpitts.jpg" alt="Self-Colpitts Oscillator"></a></div>
+            <div class="project-image"><a href="project-colpitts.html"><img src="pcb.png" alt="Self-Colpitts Oscillator"></a></div>
             <div class="project-text">
                 <h2><a href="project-colpitts.html">Self-Colpitts Oscillator</a></h2>
                 <p><strong>Dynamically tracking the unmeasurable.</strong> We developed a novel cryogenic AC magnetic measurement technique utilizing self-oscillating LC circuits to map elusive magnetic phenomena and dynamical changes in topological superconductors.</p>
             </div>
         </article>
-
         <article class="project-row">
-            <div class="project-image"><a href="project-interferometer.html"><img src="amo.png" alt="Interferometer for Pulse Probe"></a></div>
+            <div class="project-image"><a href="project-interferometer.html"><img src="amo.png" alt="Interferometer for Pulse Probe Experiment"></a></div>
             <div class="project-text">
                 <h2><a href="project-interferometer.html">Interferometer for Pulse Probe Experiment</a></h2>
                 <p><strong>Lasers are imperfect—until characterized.</strong> We built a high-precision Michelson-Morley style interferometer to rigorously decode and characterize laser properties, including frequency, wavelength, and pulse-width dynamics.</p>
             </div>
         </article>
-
         <article class="project-row reverse">
             <div class="project-image"><a href="project-ebeam.html"><img src="Ebeam.png" alt="Electron Beam Evaporator"></a></div>
             <div class="project-text">
@@ -86,7 +86,6 @@
                 <p><strong>Engineering precision from the ground up.</strong> We assembled a complete ultra-high vacuum e-beam lithography system, engineering the source and beam focus for next-generation, high-purity metal thin-film deposition.</p>
             </div>
         </article>
-
         <article class="project-row">
             <div class="project-image"><a href="project-wind.html"><img src="wind-cover.jpg" alt="Bio-Inspired Floating Foundations"></a></div>
             <div class="project-text">
@@ -94,7 +93,6 @@
                 <p><strong>Harnessing deep-ocean wind through biomimicry.</strong> To tap into the vast wind potential of the deep ocean, we designed, modeled, and tested nature-inspired floating offshore wind turbine (FOTW) foundations engineered to withstand turbulent marine environments.</p>
             </div>
         </article>
-
         <article class="project-row reverse">
             <div class="project-image"><a href="project-factory.html"><img src="digital-factory-fi.jpg" alt="Digital Factory for 3-D Printing"></a></div>
             <div class="project-text">
@@ -102,8 +100,16 @@
                 <p><strong>Welcome to Industry 5.0.</strong> We integrated additive manufacturing, resin printing, and metal deposition into a unified digital factory where every machine is actively controlled and monitored in real-time via its digital twin.</p>
             </div>
         </article>
-
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/harshit-agarwal-a88b75256/" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="sep">&middot;</span>
+            <a href="mailto:hagarwal@umd.edu">Email</a>
+        </div>
+        <div class="sub">University of Maryland, College Park</div>
+    </footer>
 
 </body>
 </html>

@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulse Probe Interferometer - Harshit Agarwal</title>
+    <title>Interferometer for Pulse Probe Experiment - Harshit Agarwal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- TOP NAVIGATION BAR -->
+<div class="page-header-band">
     <nav class="top-nav">
         <a href="index.html" class="nav-brand">Harshit Agarwal</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"><span></span><span></span><span></span></label>
         <ul class="nav-links">
             <li><a href="index.html">About</a></li>
-            <li>
-                <a href="projects.html">Research Projects <span class="dropdown-icon">▼</span></a>
+            <li class="has-dropdown">
+                <a href="projects.html" class="dropdown-trigger-desktop">Research Projects <span class="dropdown-icon">▼</span></a>
+                <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle-checkbox">
+                <label for="dropdown-toggle" class="dropdown-trigger-mobile">Research Projects <span class="dropdown-icon">▼</span></label>
                 <div class="dropdown-content">
                     <a href="project-snspd.html">Single Photon Detectors</a>
                     <a href="project-qubits.html">Superconducting Qubits</a>
@@ -30,15 +36,14 @@
             <li><a href="cv.html">CV</a></li>
         </ul>
     </nav>
+    <div class="page-header-inner" style="padding-top:22px;">
+        <div class="breadcrumb"><a href="projects.html">&larr; Back to All Projects</a></div>
+        <h1 class="page-title" style="font-size:34px;">Interferometer for Pulse Probe Experiment</h1>
+        <div style="margin-top:16px;"><span class="tag">671 nm</span><span class="tag">Michelson interferometer</span><span class="tag">FFT / STFT analysis</span></div>
+    </div>
+</div>
 
-    <!-- PROJECT CONTENT -->
     <main class="project-container">
-        <div class="breadcrumb">
-            <a href="projects.html">← Back to All Projects</a>
-        </div>
-
-        <h1 class="project-title">Interferometer for Pulse Probe Experiment</h1>
-
         <div class="project-content">
             <h3>Abstract</h3>
             <p>Accurate temporal control is critical in atomic physics for characterizing transitions in Rydberg states, such as those in Lithium atoms. This project details the construction and characterization of a Michelson-style interferometer designed to control the optical path difference between two laser pulses, effectively serving as a high-precision delay line for pump-probe experiments. A single laser source is split into two independent arms, where one arm's path length is modulated via a cat-eye mirror assembly mounted on a high-resolution translation stage. By utilizing a stepper motor with a 40:1 worm gear reduction, sub-micrometer positional control was achieved. The resulting interference patterns were analyzed in the frequency domain using Fast Fourier Transforms (FFT) and Short-Time Fourier Transforms (STFT) to characterize mechanical stability and verify the relationship between stepping rates and fringe frequencies. This setup provides a robust prototype for future experiments requiring attosecond-to-picosecond time-delay resolution</p>
@@ -47,7 +52,7 @@
             <ul>
                 <li>To design and build a Michelson interferometer capable of precise optical path length modulation.</li>
                 <li>To characterize the relationship between mechanical translation and the resulting interference fringe frequency.</li>
-                <li>To establish a stable prototype for controlling the time delay (δt) between pump and probe pulses in atomic Rydberg state transitions.</li>
+                <li>To establish a stable prototype for controlling the time delay (&delta;t) between pump and probe pulses in atomic Rydberg state transitions.</li>
             </ul>
 
             <h3>Methodology</h3>
@@ -55,7 +60,7 @@
             <ul>
                 <li>Constructed a Michelson-style interferometer using a 671 nm laser source.</li>
                 <li>Implemented a polarizing beam splitter to divide the initial beam into two orthogonal arms.</li>
-                <li>Utilized "cat-eye" mirror setups—consisting of a lens and a mirror—to ensure the reflected beams remained parallel to the incident beams, significantly reducing sensitivity to mechanical misalignment.</li>
+                <li>Utilized "cat-eye" mirror setups&mdash;consisting of a lens and a mirror&mdash;to ensure the reflected beams remained parallel to the incident beams, significantly reducing sensitivity to mechanical misalignment.</li>
                 <li>Used quarter-wave plates in each arm to rotate the polarization, allowing the beams to recombine and interfere at a final detector.</li>
             </ul>
 
@@ -73,8 +78,7 @@
                 <li>Processed the voltage signals using Python, performing FFT to identify the dominant fringe frequency and STFT to monitor frequency stability over time.</li>
             </ul>
 
-            <!-- Replace 'if-setup.png' with your actual image file name -->
-            <img src="if-setup.png" alt="Interferometer Optical Setup" style="width:100%; margin:20px 0; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <img src="if-setup.png" alt="Interferometer Optical Setup">
 
             <h3>Results and Discussion</h3>
             <ul>
@@ -84,9 +88,6 @@
                 <li>Short-Time Fourier Transform (STFT) plots confirmed that the fringe frequency remained consistent throughout the scan, though mechanical "ringing" was visible immediately after each motor step.</li>
             </ul>
 
-            <!-- Replace 'interferometer-results.jpg' with your actual image file name -->
-            <img src="interferometer-results.jpg" alt="Interferometer FFT Results" style="width:100%; margin:20px 0; border-radius: 4px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-
             <h3>Conclusion</h3>
             <ul>
                 <li>The interferometer successfully demonstrated the ability to modulate optical path differences with high precision.</li>
@@ -95,12 +96,19 @@
             </ul>
 
             <h3>Full Report</h3>
-            <!-- Embedded Google Drive PDF Viewer -->
-            <iframe src="https://drive.google.com/file/d/1fjQsrHhQoAtWIp2XCgYU-YdwF0BhUwms/preview" width="100%" height="800px" style="border: none;"></iframe>
+            <iframe src="https://drive.google.com/file/d/1fjQsrHhQoAtWIp2XCgYU-YdwF0BhUwms/preview" width="100%" height="800px"></iframe>
         </div>
-
         <a href="projects.html" class="back-btn">Return to Projects</a>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/harshit-agarwal-a88b75256/" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="sep">&middot;</span>
+            <a href="mailto:hagarwal@umd.edu">Email</a>
+        </div>
+        <div class="sub">University of Maryland, College Park</div>
+    </footer>
 
 </body>
 </html>

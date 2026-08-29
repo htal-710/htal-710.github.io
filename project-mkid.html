@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Superconducting Quantum Sensors - Harshit Agarwal</title>
+    <title>Superconducting Quantum Sensors (MKIDs) - Harshit Agarwal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- TOP NAVIGATION BAR -->
+<div class="page-header-band">
     <nav class="top-nav">
         <a href="index.html" class="nav-brand">Harshit Agarwal</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"><span></span><span></span><span></span></label>
         <ul class="nav-links">
             <li><a href="index.html">About</a></li>
-            <li>
-                <a href="projects.html">Research Projects <span class="dropdown-icon">▼</span></a>
+            <li class="has-dropdown">
+                <a href="projects.html" class="dropdown-trigger-desktop">Research Projects <span class="dropdown-icon">▼</span></a>
+                <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle-checkbox">
+                <label for="dropdown-toggle" class="dropdown-trigger-mobile">Research Projects <span class="dropdown-icon">▼</span></label>
                 <div class="dropdown-content">
                     <a href="project-snspd.html">Single Photon Detectors</a>
                     <a href="project-qubits.html">Superconducting Qubits</a>
@@ -30,21 +36,19 @@
             <li><a href="cv.html">CV</a></li>
         </ul>
     </nav>
+    <div class="page-header-inner" style="padding-top:22px;">
+        <div class="breadcrumb"><a href="projects.html">&larr; Back to All Projects</a></div>
+        <h1 class="page-title" style="font-size:34px;">Superconducting Quantum Sensors (MKIDs)</h1>
+        <div style="margin-top:16px;"><span class="tag">10 &ndash; 100 mK</span><span class="tag">MKID / TKID</span><span class="tag">NIST</span></div>
+    </div>
+</div>
 
-    <!-- PROJECT CONTENT -->
     <main class="project-container">
-        <div class="breadcrumb">
-            <a href="projects.html">← Back to All Projects</a>
-        </div>
-
-        <h1 class="project-title">Superconducting Quantum Sensors (MKIDs)</h1>
-        
         <div class="project-content">
             <h3>Abstract</h3>
             <p>High-sensitivity radiation detection is essential for applications ranging from sub-millimeter astronomy to the characterization of quantum materials. Microwave Kinetic Inductance Detectors (MKIDs) represent a transformative technology in this field, leveraging the kinetic inductance effect in superconducting thin films to detect individual photons with high energy and temporal resolution. This project focuses on the development and characterization of MKID and Thermal Kinetic Inductance Detector (TKID) arrays. A primary emphasis of the current work is the establishment of a cryogenic polarization measurement system designed to evaluate sensor response at millikelvin temperatures. By integrating microwave engineering with low-temperature physics, this research aims to optimize the sensitivity and noise performance of these detectors, providing a robust platform for next-generation quantum sensing and imaging applications.</p>
-            
+
             <h3>Objective</h3>
-	<!-- Image 1 with float class -->
             <img src="horizontal.png" alt="Vacuum Chamber Assembly" class="project-image-float">
             <ul>
                 <li>To design and characterize high-sensitivity MKID and TKID sensors for quantum-limited radiation detection.</li>
@@ -53,19 +57,16 @@
             </ul>
 
             <h3>Methodology</h3>
-            
-            <!-- Floating image for the methodology section -->
             <img src="mkid-cryostat.png" alt="MKID Cryogenic Setup and Optical Stack" class="project-image-float-left" style="max-width: 350px;">
-
             <p><strong>Resonator Design and Simulation:</strong></p>
             <ul>
-                <li>Designed quarter-wave (λ/4) and half-wave (λ/2) coplanar waveguide (CPW) resonators utilizing superconducting thin films (e.g., Al, Nb, or TiN).</li>
-                <li>Used finite-element analysis to model the kinetic inductance fraction (αk), ensuring the resonator frequency shifts are detectable upon photon absorption.</li>
+                <li>Designed quarter-wave (&lambda;/4) and half-wave (&lambda;/2) coplanar waveguide (CPW) resonators utilizing superconducting thin films (e.g., Al, Nb, or TiN).</li>
+                <li>Used finite-element analysis to model the kinetic inductance fraction (&alpha;k), ensuring the resonator frequency shifts are detectable upon photon absorption.</li>
             </ul>
-            
+
             <p><strong>Cryogenic Measurement Setup:</strong></p>
             <ul>
-                <li>Integrated the sensors into a dilution refrigerator capable of reaching base temperatures in the 10–100 mK range.</li>
+                <li>Integrated the sensors into a dilution refrigerator capable of reaching base temperatures in the 10&ndash;100 mK range.</li>
                 <li>Developed a polarization-sensitive readout chain to characterize the sensors' response to varying optical or microwave signal orientations.</li>
             </ul>
 
@@ -90,9 +91,17 @@
                 <li>Continued optimization of the fabrication process will target higher quality factors to enable larger multiplexing ratios for high-pixel-count imaging.</li>
             </ul>
         </div>
-
         <a href="projects.html" class="back-btn">Return to Projects</a>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/harshit-agarwal-a88b75256/" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="sep">&middot;</span>
+            <a href="mailto:hagarwal@umd.edu">Email</a>
+        </div>
+        <div class="sub">University of Maryland, College Park</div>
+    </footer>
 
 </body>
 </html>

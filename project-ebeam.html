@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electron Beam Evaporator - Harshit Agarwal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- TOP NAVIGATION BAR -->
+<div class="page-header-band">
     <nav class="top-nav">
         <a href="index.html" class="nav-brand">Harshit Agarwal</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"><span></span><span></span><span></span></label>
         <ul class="nav-links">
             <li><a href="index.html">About</a></li>
-            <li>
-                <a href="projects.html">Research Projects <span class="dropdown-icon">▼</span></a>
+            <li class="has-dropdown">
+                <a href="projects.html" class="dropdown-trigger-desktop">Research Projects <span class="dropdown-icon">▼</span></a>
+                <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle-checkbox">
+                <label for="dropdown-toggle" class="dropdown-trigger-mobile">Research Projects <span class="dropdown-icon">▼</span></label>
                 <div class="dropdown-content">
                     <a href="project-snspd.html">Single Photon Detectors</a>
                     <a href="project-qubits.html">Superconducting Qubits</a>
@@ -30,24 +36,20 @@
             <li><a href="cv.html">CV</a></li>
         </ul>
     </nav>
+    <div class="page-header-inner" style="padding-top:22px;">
+        <div class="breadcrumb"><a href="projects.html">&larr; Back to All Projects</a></div>
+        <h1 class="page-title" style="font-size:34px;">Electron Beam Evaporator</h1>
+        <div style="margin-top:16px;"><span class="tag">&lt; 10<sup>-7</sup> Torr</span><span class="tag">Thin-film deposition</span><span class="tag">Group project</span></div>
+    </div>
+</div>
 
-    <!-- PROJECT CONTENT -->
     <main class="project-container">
-        <div class="breadcrumb">
-            <a href="projects.html">← Back to All Projects</a>
-        </div>
-
-        <h1 class="project-title">Electron Beam Evaporator</h1>
-
         <div class="project-content">
             <h3>Abstract</h3>
-            <p>Physical Vapor Deposition (PVD) is a cornerstone of nanotechnology, yet access to specialized deposition equipment is often a bottleneck for departmental research. As part of a collaborative group project, we addressed the absence of such facilities at Missouri S&T by assembling, commissioning, and characterizing a custom electron-beam (e-beam) deposition chamber. This system utilizes thermionic emission from a tantalum filament to generate a high-energy electron beam, which is then accelerated and steered toward a target material to induce evaporation in a high-vacuum environment. The project involved the integration of a multi-stage vacuum stack, the development of beam control electronics, and the validation of the system through the deposition of aluminum thin films. By characterizing the resulting films via ellipsometry and conductivity measurements, the group successfully established a functional research tool capable of supporting the fabrication of advanced quantum and electronic devices.</p>
+            <p>Physical Vapor Deposition (PVD) is a cornerstone of nanotechnology, yet access to specialized deposition equipment is often a bottleneck for departmental research. As part of a collaborative group project, we addressed the absence of such facilities at Missouri S&amp;T by assembling, commissioning, and characterizing a custom electron-beam (e-beam) deposition chamber. This system utilizes thermionic emission from a tantalum filament to generate a high-energy electron beam, which is then accelerated and steered toward a target material to induce evaporation in a high-vacuum environment. The project involved the integration of a multi-stage vacuum stack, the development of beam control electronics, and the validation of the system through the deposition of aluminum thin films. By characterizing the resulting films via ellipsometry and conductivity measurements, the group successfully established a functional research tool capable of supporting the fabrication of advanced quantum and electronic devices.</p>
 
             <h3>Objective</h3>
-            
-            <!-- Image 1 with float class -->
             <img src="ebeam-diagram.jpg" alt="Electron Beam Evaporator Diagram" class="project-image-float">
-            
             <ul>
                 <li>To assemble a functional e-beam deposition chamber from discrete vacuum and electronic components for the Physics department.</li>
                 <li>To achieve and maintain high-vacuum base pressures (below 10^-7 Torr) necessary for high-purity thin-film growth.</li>
@@ -56,18 +58,15 @@
             </ul>
 
             <h3>Methodology</h3>
-            
             <p><strong>Vacuum Infrastructure and Assembly:</strong></p>
-            <!-- Image 2 with float class -->
             <img src="ebeam-chamber.jpg" alt="Vacuum Chamber Assembly" class="project-image-float">
             <ul>
                 <li>Assembled a stainless-steel vacuum chamber using pre-prepared components, ensuring all seals were helium leak-tested.</li>
                 <li>Integrated a two-stage pumping system: a dry (oil-free) scroll pump for initial roughing and a turbomolecular pump for reaching high-vacuum regimes.</li>
-                <li>Monitored internal pressure using high-vacuum gauges to verify base pressures as low as 4.13 × 10^-8 Torr.</li>
+                <li>Monitored internal pressure using high-vacuum gauges to verify base pressures as low as 4.13 &times; 10^-8 Torr.</li>
             </ul>
 
             <p><strong>E-Beam Source and Control Development:</strong></p>
-            <!-- Image 3 with float class -->
             <img src="ebeam-filament.jpg" alt="E-Beam Source and Filament" class="project-image-float">
             <ul>
                 <li>Configured an electron gun using thermionic emission from a tantalum filament.</li>
@@ -77,17 +76,16 @@
             </ul>
 
             <p><strong>Deposition and Thin-Film Characterization:</strong></p>
-            <!-- Image 4 with float class -->
             <img src="ebeam-probe.jpg" alt="Four-Point Probe Testing" class="project-image-float">
             <ul>
                 <li>Performed deposition runs using aluminum targets on silicon and glass substrates.</li>
-                <li>Utilized an ellipsometer to measure film thickness, reflectivity, and polarization, identifying films on the scale of ~1214 Å.</li>
+                <li>Utilized an ellipsometer to measure film thickness, reflectivity, and polarization, identifying films on the scale of ~1214 &Aring;.</li>
                 <li>Conducted conductivity testing using a lock-in amplifier and a four-point probe method to assess the electrical quality of the deposited layers.</li>
             </ul>
 
             <h3>Results and Discussion</h3>
             <ul>
-                <li>The system successfully attained a high-vacuum base pressure of 5×10^-8 Torr in an empty chamber, which is critical for preventing film contamination.</li>
+                <li>The system successfully attained a high-vacuum base pressure of 5&times;10^-8 Torr in an empty chamber, which is critical for preventing film contamination.</li>
                 <li>Deposition tests confirmed the ability to grow thin films, though initial characterization showed some unevenness in coverage, highlighting the need for refined beam steering.</li>
                 <li>Conductivity and polarization measurements confirmed that the deposited aluminum maintained its metallic properties, validating the system's effectiveness for circuit fabrication.</li>
             </ul>
@@ -99,12 +97,19 @@
             </ul>
 
             <h3>Full Report</h3>
-            <!-- Interactive PDF Viewer at bottom (unaffected by float) -->
-            <iframe src="https://drive.google.com/file/d/1WJ_k7nouCxkq2xER6Du3ioULcZ2B3LB3/preview" width="100%" height="800px" style="border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin-top: 20px;"></iframe>
+            <iframe src="https://drive.google.com/file/d/1WJ_k7nouCxkq2xER6Du3ioULcZ2B3LB3/preview" width="100%" height="800px"></iframe>
         </div>
-
         <a href="projects.html" class="back-btn">Return to Projects</a>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/harshit-agarwal-a88b75256/" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="sep">&middot;</span>
+            <a href="mailto:hagarwal@umd.edu">Email</a>
+        </div>
+        <div class="sub">University of Maryland, College Park</div>
+    </footer>
 
 </body>
 </html>
